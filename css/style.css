@@ -1,0 +1,314 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ user-select: none;
+}
+
+body {
+ height: 100vh;
+ margin: 0;
+ /* overflow-y: hidden; */
+ font-size: 20px;
+ margin-bottom: 50px;
+ background: rgb(219, 219, 255);
+}
+
+main {
+ position: relative;
+ top: 20px;
+}
+
+main,
+#num {
+ margin: 30px 30px;
+}
+
+header {
+ position: fixed;
+ width: 100%;
+ top: 0;
+ background-color: blue;
+ color: white;
+ z-index: 2;
+}
+
+header h4 {
+ text-align: center;
+ margin: 0 5px;
+ padding: 4px;
+}
+
+button {
+ font-size: 20px;
+}
+
+.btn {
+ margin: 0 8px;
+ margin-top: 20px;
+ color: blue;
+ background: white;
+ border: 1px solid blue;
+ padding: 4px;
+ border-radius: 3px 5px;
+ cursor: pointer;
+ transition: all 0.2s ease;
+}
+
+.btn:hover {
+ background: blue;
+ color: white;
+}
+
+span {
+ font-size: 20px;
+}
+
+.quesNum,
+.ques {
+ font-size: 20px;
+}
+
+#num {
+ display: flex;
+ flex-wrap: wrap;
+ margin-top: 20px;
+ /* margin-bottom: 500px; */
+}
+
+#first {
+ margin-top: 20px;
+ margin-left: 20px;
+}
+.opt {
+ margin-left: 10px;
+}
+.numbers {
+ color: white;
+ font-size: 20px;
+ padding: 10px;
+ background: black;
+ margin: 10px 2px;
+ cursor: pointer;
+ transition: all 0s ease;
+}
+
+.numbers:hover {
+ background: rgb(139, 139, 224);
+}
+
+.answered {
+ background: blue;
+}
+.choose,
+.submit {
+ padding: 4px;
+ margin: 4px;
+ color: black;
+ cursor: pointer;
+}
+
+button {
+ background-color: #fefefe;
+ border: 1px solid blue;
+ color: black;
+ padding: 5px;
+ box-shadow: 2px 2px 4px blue;
+}
+
+.active {
+ border: 1px solid blue;
+ /* padding: 5px; */
+ background: blue;
+ color: white;
+}
+
+.submit {
+ /* background: red; */
+ color: black;
+ /* border: 2px solid red; */
+ border-radius: 3px 2px 3px 2px;
+ box-shadow: 2px 2px 1px blue;
+}
+
+.submit:hover {
+ background-color: blue;
+ border: 1px solid white;
+ color: white;
+}
+
+/* modal box */
+.modal {
+ display: none;
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ padding-top: 100px; /* Location of the box */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0, 0, 0); /* Fallback color */
+ background-color: rgba(0, 0, 250, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+ background-color: #fefefe;
+ margin: auto;
+ padding: 20px;
+ border: 1px solid #888;
+ width: fit-content;
+ border: 1px solid white;
+}
+
+/* The Close Button */
+.close {
+ color: #aaaaaa;
+ float: right;
+ font-size: 28px;
+ font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+ color: #000;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+.p-tag {
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.question-container {
+ display: flex;
+ align-items: flex-start;
+ gap: 5px;
+}
+
+table {
+ width: 100%;
+ margin: auto;
+}
+
+table,
+th,
+td {
+ border-collapse: collapse;
+ border: 1px solid #aaaaaa;
+}
+
+th,
+td {
+ padding: 10px;
+}
+
+th {
+ background-color: blue;
+ color: white;
+}
+
+tr:nth-child(odd) {
+ background-color: #ddd;
+}
+
+tr:hover {
+ background-color: #f2f2f2;
+}
+
+.result-modal {
+ display: none;
+ position: fixed;
+ z-index: 1;
+ padding-top: 100px;
+ left: 0;
+ top: 0;
+ width: 100%;
+ height: 100%;
+ overflow: auto;
+ background-color: rgb(0, 0, 0);
+ background-color: rgba(0, 0, 250, 0.4);
+}
+
+.result-content {
+ background-color: #fefefe;
+ margin: auto;
+ padding: 20px;
+ border: 1px solid #888;
+ width: 80%;
+}
+
+.result.btn-modal {
+ margin-right: 10px;
+ margin-top: 20px;
+ font-size: 16px;
+}
+
+.flex {
+ display: flex;
+ align-items: center;
+ margin-top: 5px;
+}
+
+#footer {
+ position: fixed;
+ /* top: 89%; */
+ bottom: 0;
+ margin: 0;
+ width: 100%;
+ font-size: 18px;
+ text-align: center;
+ background-color: aqua;
+}
+
+.btn-modal {
+ padding: 10px;
+ border-radius: 10px;
+ margin-right: 10px;
+ border: none;
+ background-color: rgb(31, 31, 204);
+ box-shadow: none;
+ color: white;
+ cursor: pointer;
+ transition: background-color 0.5s ease;
+}
+
+.btn-modal:hover {
+ background-color: black;
+}
+
+@media (max-width: 768px) {
+ * {
+  font-size: 14px;
+ }
+
+ header h4 {
+  font-size: 16px;
+ }
+
+ button {
+  font-size: 14px;
+ }
+
+ #num span {
+  font-size: 14px;
+ }
+
+ .modal-content {
+  width: 90%;
+ }
+
+ .result-content {
+  width: 97%;
+  padding: 12px 6px;
+ }
+
+ .result.btn-modal {
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 8px;
+ }
+}
